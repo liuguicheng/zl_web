@@ -83,7 +83,7 @@
             <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center mr-3">
               <i class="fa fa-link text-white text-xl"></i>
             </div>
-            <span class="text-xl font-bold text-white animate-bounce-slow">广西星火链数字科技</span>
+            <span id="company-name" class="text-xl font-bold text-white animate-bounce-slow">广西星火链数字科技</span>
           </a>
         </div>
         
@@ -993,6 +993,8 @@
     const backToTop = document.getElementById('back-to-top');
     
     window.addEventListener('scroll', function() {
+      const companyName = document.getElementById('company-name');
+
       if (window.scrollY > 50) {
         navbar.classList.add('bg-white', 'shadow-md');
         navbar.classList.remove('bg-transparent');
@@ -1000,6 +1002,8 @@
           link.classList.remove('text-white');
           link.classList.add('text-dark');
         });
+        companyName.classList.remove('text-white');
+        companyName.classList.add('text-primary');
         backToTop.classList.remove('translate-y-20', 'opacity-0');
       } else {
         navbar.classList.remove('bg-white', 'shadow-md');
@@ -1008,6 +1012,8 @@
           link.classList.add('text-white');
           link.classList.remove('text-dark');
         });
+        companyName.classList.add('text-white');
+        companyName.classList.remove('text-primary');
         backToTop.classList.add('translate-y-20', 'opacity-0');
       }
     });
@@ -1126,4 +1132,3 @@
   </script>
 </body>
 </html>
-    
