@@ -15,8 +15,8 @@
       theme: {
         extend: {
           colors: {
-            primary: '#165DFF',
-            secondary: '#00B42A',
+            primary: '#F97316',
+            secondary: '#FBBF24',
             dark: '#1D2129',
             light: '#F2F3F5',
             'gray-medium': '#86909C'
@@ -43,8 +43,21 @@
         color: transparent;
       }
       .bg-grid {
-        background-image: radial-gradient(rgba(22, 93, 255, 0.1) 1px, transparent 1px);
+        background-image: radial-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px);
         background-size: 20px 20px;
+      }
+      .animate-bounce-slow {
+        animation: bounce 3s infinite;
+      }
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(-5%);
+          animation-timing-function: cubic-bezier(0.8,0,1,1);
+        }
+        50% {
+          transform: translateY(0);
+          animation-timing-function: cubic-bezier(0,0,0.2,1);
+        }
       }
       .animate-float {
         animation: float 6s ease-in-out infinite;
@@ -70,19 +83,19 @@
             <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center mr-3">
               <i class="fa fa-link text-white text-xl"></i>
             </div>
-            <span class="text-xl font-bold text-white">广西星火链数字科技</span>
+            <span class="text-xl font-bold text-white animate-bounce-slow">广西星火链数字科技</span>
           </a>
         </div>
         
         <!-- 桌面导航 -->
         <nav class="hidden md:flex items-center space-x-8">
-          <a href="#home" class="text-white hover:text-primary/90 transition-colors font-medium">首页</a>
-          <a href="#about" class="text-white hover:text-primary/90 transition-colors font-medium">关于我们</a>
-          <a href="#services" class="text-white hover:text-primary/90 transition-colors font-medium">主营业务</a>
-          <a href="#technology" class="text-white hover:text-primary/90 transition-colors font-medium">技术方案</a>
-          <a href="#cases" class="text-white hover:text-primary/90 transition-colors font-medium">案例展示</a>
-          <a href="#partners" class="text-white hover:text-primary/90 transition-colors font-medium">合作伙伴</a>
-          <a href="#contact" class="text-white hover:text-primary/90 transition-colors font-medium">联系我们</a>
+          <a href="#home" class="text-white hover:text-secondary/90 transition-colors font-medium">首页</a>
+          <a href="#about" class="text-white hover:text-secondary/90 transition-colors font-medium">关于我们</a>
+          <a href="#services" class="text-white hover:text-secondary/90 transition-colors font-medium">主营业务</a>
+          <a href="#technology" class="text-white hover:text-secondary/90 transition-colors font-medium">技术方案</a>
+          <a href="#cases" class="text-white hover:text-secondary/90 transition-colors font-medium">案例展示</a>
+          <a href="#partners" class="text-white hover:text-secondary/90 transition-colors font-medium">合作伙伴</a>
+          <a href="#contact" class="text-white hover:text-secondary/90 transition-colors font-medium">联系我们</a>
         </nav>
         
         <!-- 联系按钮 -->
@@ -102,13 +115,13 @@
     <!-- 移动端导航菜单 -->
     <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
       <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-        <a href="#home" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">首页</a>
-        <a href="#about" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">关于我们</a>
-        <a href="#services" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">主营业务</a>
-        <a href="#technology" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">技术方案</a>
-        <a href="#cases" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">案例展示</a>
-        <a href="#partners" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100">合作伙伴</a>
-        <a href="#contact" class="text-dark hover:text-primary transition-colors font-medium py-2">联系我们</a>
+        <a href="#home" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">首页</a>
+        <a href="#about" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">关于我们</a>
+        <a href="#services" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">主营业务</a>
+        <a href="#technology" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">技术方案</a>
+        <a href="#cases" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">案例展示</a>
+        <a href="#partners" class="text-dark hover:text-secondary transition-colors font-medium py-2 border-b border-gray-100">合作伙伴</a>
+        <a href="#contact" class="text-dark hover:text-secondary transition-colors font-medium py-2">联系我们</a>
         <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-all text-center font-medium">
           商务合作
         </a>
@@ -129,7 +142,7 @@
         <div class="text-white">
           <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-6">
             星火・链动万物<br>
-            <span class="bg-gradient-to-r from-blue-300 to-green-300 text-gradient">数实共生</span>
+            <span class="bg-gradient-to-r from-orange-400 to-amber-300 text-gradient">数实共生</span>
           </h1>
           <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-xl">
             星火链网驱动的可信数实融合服务商，专注「区块链 + 产业低碳化赋能」
@@ -1050,16 +1063,16 @@
             label: '效率提升',
             data: [30, 50, 40, 20],
             backgroundColor: [
-              'rgba(22, 93, 255, 0.7)',
-              'rgba(22, 93, 255, 0.7)',
-              'rgba(22, 93, 255, 0.7)',
-              'rgba(22, 93, 255, 0.7)'
+              'rgba(249, 115, 22, 0.7)',
+              'rgba(249, 115, 22, 0.7)',
+              'rgba(249, 115, 22, 0.7)',
+              'rgba(249, 115, 22, 0.7)'
             ],
             borderColor: [
-              'rgba(22, 93, 255, 1)',
-              'rgba(22, 93, 255, 1)',
-              'rgba(22, 93, 255, 1)',
-              'rgba(22, 93, 255, 1)'
+              'rgba(249, 115, 22, 1)',
+              'rgba(249, 115, 22, 1)',
+              'rgba(249, 115, 22, 1)',
+              'rgba(249, 115, 22, 1)'
             ],
             borderWidth: 1
           }]
